@@ -22,9 +22,9 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       width: 100%;
       max-width: 450px;
+      text-align: center;
     }
     h1 {
-      text-align: center;
       margin-bottom: 1rem;
     }
     table {
@@ -62,6 +62,13 @@
     button:hover {
       background-color: #128C7E;
     }
+    .qr-section {
+      margin-top: 2rem;
+    }
+    .qr-section img {
+      width: 200px;
+      height: 200px;
+    }
   </style>
 </head>
 <body>
@@ -92,8 +99,13 @@
     </table>
 
     <textarea id="orderText" rows="3" placeholder="Your order"></textarea>
-    <input type="text" id="shopNumber" placeholder="Shop Number" required />
+    <input type="text" id="shopNumber" placeholder="Shop Number" />
     <button onclick="sendOrder()">Submit</button>
+
+    <div class="qr-section">
+      <p>👇 Scan गर्न QR:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://kakanzi.github.io/Fastfood_orderr/&size=200x200" alt="QR Code">
+    </div>
   </div>
 
   <script>
