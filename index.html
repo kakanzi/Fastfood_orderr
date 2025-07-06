@@ -7,164 +7,158 @@
   <style>
     body {
       font-family: sans-serif;
-      padding: 20px;
-      background-color: #fffbe6;
-    }
-    h1 {
-      font-size: 28px;
-      font-weight: bold;
-      color: #e67e22;
-      margin-bottom: 20px;
-    }
-    h2 {
-      background-color: #f8d7a3;
-      padding: 10px;
-      font-size: 22px;
-      margin-top: 20px;
-      border-radius: 8px;
-    }
-    .item-row {
+      background: #fefae0;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      margin: 8px 0;
-    }
-    .item-row label {
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 1rem;
       font-weight: bold;
-      font-size: 18px;
-      margin-left: 8px;
-      flex: 1;
     }
-    input[type="checkbox"] {
-      transform: scale(1.3);
-    }
-    select {
-      margin-left: 10px;
-      font-size: 16px;
-      padding: 3px;
-    }
-    input[type="text"] {
-      padding: 8px;
-      width: 200px;
-      margin-top: 15px;
-      font-size: 16px;
-    }
-    button {
-      margin-top: 30px;
-      padding: 10px 20px;
-      background-color: #2ecc71;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .contact-section {
-      margin-top: 40px;
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
       text-align: center;
     }
-    .contact-section h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
     }
-    .qr-img {
-      margin-top: 10px;
-      max-width: 200px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+    }
+    th, td {
+      padding: 0.7rem;
+      border: 1px solid #ddd;
+      text-align: left;
+      font-weight: bold;
+    }
+    th {
+      background-color: #dcedc1;
+    }
+    input[type="number"] {
+      width: 50px;
+    }
+    textarea, input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    button {
+      background-color: #25D366;
+      color: white;
+      border: none;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      width: 100%;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #128C7E;
+    }
+    .qr-section {
+      margin-top: 2rem;
+    }
+    .qr-section img {
+      width: 200px;
+      height: 200px;
+    }
+    .section-header {
+      text-align: left;
+      background: #ffe6c9;
+      font-weight: bold;
+      padding: 0.7rem;
+    }
+    #confirmation {
+      margin-top: 1.5rem;
+      color: green;
+      font-size: 1.1rem;
+      display: none;
     }
   </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="card">
+    <h1>🍱 TIFFIN BOX</h1>
 
-  <h1>🍱 Tiffin Box Menu</h1>
+    <table>
+      <tr><th colspan="4" class="section-header">FOOD</th></tr>
+      <tr><th>Select</th><th>Item</th><th>Price</th><th>Qty</th></tr>
+      <tr><td><input type="checkbox" value="Khana Set - 120 Veg"></td><td>🍛 Khana Set - 120 Veg</td><td>Rs. 120</td><td><input type="number" min="1" value="1"></td></tr>
+      <tr><td><input type="checkbox" value="Khana Set - 170 Chicken"></td><td>🍛 Khana Set - 170 Chicken</td><td>Rs. 170</td><td><input type="number" min="1" value="1"></td></tr>
+      <tr><td><input type="checkbox" value="MoMo - 120 Buff"></td><td>🥟 MoMo - 120 Buff</td><td>Rs. 120</td><td><input type="number" min="1" value="1"></td></tr>
+      <tr><td><input type="checkbox" value="MoMo - 150 Chicken"></td><td>🥟 MoMo - 150 Chicken</td><td>Rs. 150</td><td><input type="number" min="1" value="1"></td></tr>
+      <tr><td><input type="checkbox" value="MoMo - 100 Veg"></td><td>🥟 MoMo - 100 Veg</td><td>Rs. 100</td><td><input type="number" min="1" value="1"></td></tr>
+      <tr><td><input type="checkbox" value="Chowmeen - 120 Buff"></td><td>🍜 Chowmeen - 120 Buff</td><td>Rs. 120</td><td><input type="number" min="1" value="1"></td></tr>
+      <tr><td><input type="checkbox" value="Chowmeen - 150 Chicken"></td><td>🍜 Chowmeen - 150 Chicken</td><td>Rs. 150</td><td><input type="number" min="1" value="1"></td></tr>
+      <tr><td><input type="checkbox" value="Chowmeen - 100 Veg"></td><td>🍜 Chowmeen - 100 Veg</td><td>Rs. 100</td><td><input type="number" min="1" value="1"></td></tr>
 
-  <h2>🍛 FOOD</h2>
+      <tr><th colspan="4" class="section-header">BEVERAGES</th></tr>
+      <tr><td><input type="checkbox" value="Milk Tea"></td><td>☕ Milk Tea</td><td>Rs. 25</td><td><input type="number" min="1" value="1"></td></tr>
+      <tr><td><input type="checkbox" value="Black Tea"></td><td>☕ Black Tea</td><td>Rs. 15</td><td><input type="number" min="1" value="1"></td></tr>
+      <tr><td><input type="checkbox" value="Milk Coffee"></td><td>☕ Milk Coffee</td><td>Rs. 30</td><td><input type="number" min="1" value="1"></td></tr>
+      <tr><td><input type="checkbox" value="Black Coffee"></td><td>☕ Black Coffee</td><td>Rs. 20</td><td><input type="number" min="1" value="1"></td></tr>
+      <tr><td><input type="checkbox" value="Cold Drink"></td><td>🥤 Cold Drink</td><td>Rs. 50</td><td><input type="number" min="1" value="1"></td></tr>
+    </table>
 
-  <div class="item-row"><input type="checkbox" name="item" value="Khana Set -120 Veg" /><label>Khana Set -120 Veg</label><select disabled><option value="">Qty</option><option</option><option>1<option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-  <div class="item-row"><input type="checkbox" name="item" value="Khana Set -170 Chicken" /><label>Khana Set -170 Chicken</label><select disabled><option value="">Qty</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-  <div class="item-row"><input type="checkbox" name="item" value="MoMo" /><label>MoMo</label><select disabled><option value="">Qty</option</option><option>1</option><option>1.5</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-  <div class="item-row"><input type="checkbox" name="item" value="MoMo - 120 Buff" /><label>MoMo - 120 Buff</label><select disabled><option value="">Qty</option><option>1</option><option>1.5</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-  <div class="item-row"><input type="checkbox" name="item" value="MoMo - 150 Chicken" /><label>MoMo - 150 Chicken</label><select disabled><option value="">Qty</option><option>1</option><option>1.5</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-  <div class="item-row"><input type="checkbox" name="item" value="MoMo - 100 Veg" /><label>MoMo - 100 Veg</label><select disabled><option value="">Qty</option><option>1</option><option>1.5</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-  <div class="item-row"><input type="checkbox" name="item" value="Chowmeen" /><label>Chowmeen</label><select disabled><option value="">Qty</option><option>1/2</option><option>1</option><option>1.5</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-  <div class="item-row"><input type="checkbox" name="item" value="Chowmeen - 120 Buff" /><label>Chowmeen - 120 Buff</label><select disabled><option value="">Qty</option><option>1/2</option><option>1</option><option>1.5</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-  <div class="item-row"><input type="checkbox" name="item" value="Chowmeen -150 Chicken" /><label>Chowmeen -150 Chicken</label><select disabled><option value="">Qty</option><option>1/2</option><option>1</option><option>1.5</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-  <div class="item-row"><input type="checkbox" name="item" value="Chowmeen -100 Veg" /><label>Chowmeen -100 Veg</label><select disabled><option value="">Qty</option><option>1/2</option><option>1</option><option>1.5</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
+    <input type="number" id="shopNumber" placeholder="Shop Number" oninput="limitLength(this)" />
+    <button onclick="sendOrder()">Order Now</button>
+    <div id="confirmation">✅ Your order is confirmed!</div>
 
-  <h2>🥤 BEVERAGES</h2>
-
-  <div class="item-row"><input type="checkbox" name="item" value="Milk Tea -25" /><label>Milk Tea -25</label><select disabled><option value="">Qty</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-  <div class="item-row"><input type="checkbox" name="item" value="Black Tea -15" /><label>Black Tea -15</label><select disabled><option value="">Qty</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-  <div class="item-row"><input type="checkbox" name="item" value="Milk Coffee -30" /><label>Milk Coffee -30</label><select disabled><option value="">Qty</option><<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-  <div class="item-row"><input type="checkbox" name="item" value="Black Coffee -20" /><label>Black Coffee -20</label><select disabled><option value="">Qty</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-  <div class="item-row"><input type="checkbox" name="item" value="Cold Drink -50" /><label>Cold Drink -50</label><select disabled><option value="">Qty</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
-
-  
-  <input type="text" id="shop" placeholder="Your Shop No" />
-
-  <button onclick="sendWhatsApp()">Order Now</button>
-
-  <div class="contact-section">
-    <h3>📞 Contact Us: 9823141208</h3>
-    <canvas id="qrCanvas" class="qr-img"></canvas>
+    <div class="qr-section">
+      <p>👇 Scan गर्न QR:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://kakanzi.github.io/Fastfood_orderr/&size=200x200" alt="QR Code">
+    </div>
   </div>
 
-  <!-- JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
   <script>
-    // Enable/disable quantity dropdown
-    document.querySelectorAll('input[name="item"]').forEach(cb => {
-      cb.addEventListener('change', () => {
-        const select = cb.closest('.item-row').querySelector('select');
-        select.disabled = !cb.checked;
-        if (!cb.checked) select.value = '';
-        else if (!select.value) select.value = '1';
-      });
-    });
-
-    function sendWhatsApp() {
-      const shop = document.getElementById("shop").value.trim();
-      if (!shop) {
-        alert("कृपया Shop Number भर गर्नुहोस्।");
-        return;
-      }
-
-      const items = [];
-      document.querySelectorAll('input[name="item"]:checked').forEach(cb => {
-        const select = cb.closest('.item-row').querySelector('select');
-        if (!select.value) {
-          alert(`कृपया "${cb.value}" को quantity छान्नुहोस्।`);
-          return;
+    function sendOrder() {
+      const checkboxes = document.querySelectorAll('table input[type="checkbox"]');
+      let orderSummary = '';
+      checkboxes.forEach((cb) => {
+        if (cb.checked) {
+          const row = cb.closest('tr');
+          const item = row.cells[1].innerText.trim();
+          const qty = row.querySelector('input[type="number"]').value;
+          orderSummary += `${item} x${qty}\n`;
         }
-        items.push(`${cb.value} x ${select.value}`);
       });
 
-      if (items.length === 0) {
-        alert("कृपया कम्तिमा एक item छान्नुहोस्।");
+      const shop = document.getElementById('shopNumber').value.trim();
+      if (!shop) {
+        alert("Shop Number is compulsory!");
         return;
       }
 
-      const message = `Tiffin Box Order:\n\n${items.join("\n")}\n\nShop Number: ${shop}`;
-      const url = `https://wa.me/9779823141208?text=${encodeURIComponent(message)}`;
+      const message = `Tiffin Box Order:\n\n${orderSummary}\nShop Number: ${shop}`;
+      const phone = "9779823141208";
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
 
-      const a = document.createElement("a");
-      a.href = url;
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+      document.getElementById('confirmation').style.display = 'block';
     }
 
-    // Generate QR Code
-    const qr = new QRious({
-      element: document.getElementById('qrCanvas'),
-      value: "https://wa.me/9779823141208",
-      size: 200,
-      background: '#fffbe6',
-      foreground: '#2c3e50',
-      level: 'H'
-    });
+    function limitLength(el) {
+      if (el.value.length > 3) {
+        el.value = el.value.slice(0, 3);
+      }
+    }
   </script>
-
 </body>
 </html>
